@@ -21,7 +21,9 @@
   "dependencies": {
     "awilix": "^6.0.0",
     "awilix-express": "^6.0.0",
-    "express": "^4.17.1"
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "mongodb": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "^8.2.0",
