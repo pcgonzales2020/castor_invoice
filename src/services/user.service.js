@@ -1,16 +1,17 @@
 const bcrypt = require('bcrypt');
-const db = require('../common/database/mongo');
-
-const collectionUsers = db.collection('users');
-const collectionPasswords = db.collection('passwords');
 
 class UserService {
+    constructor({ userRepository, passwordRepository }) {
+        this.userRepository = userRepository;
+        this.passwordRepository = passwordRepository;
+    }
+
     async getAll() {
-        return collectionUsers.find({}).toArray();
+        return this.userRepository.findAll();
     }
 
     async create(data, password) {
-        await collectionUsers.insertOne(data);
+        await this.userRepository.create(data);
 
         const hashedPassword = await bcrypt.hash(password, 10);
         const passwordData = {
@@ -18,8 +19,7 @@ class UserService {
             password: hashedPassword,
         };
 
-        await collectionPasswords.insertOne(passwordData);
-
+        await this.passwordRepository.create(passwordData);
         return data;
     }
 }

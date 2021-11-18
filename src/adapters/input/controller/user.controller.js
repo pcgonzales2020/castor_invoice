@@ -21,6 +21,7 @@ class UserController {
                 firstname: req.body.firstname,
                 lastname: req.body.lastname,
             };
+
             const result = await this.userService.create(data, req.body.password);
             res.send(result);
         } catch (error) {
