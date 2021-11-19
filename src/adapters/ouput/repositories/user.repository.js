@@ -6,7 +6,7 @@ class UserRepository {
         this.collection = userDB.collection('users');
     }
 
-    async findALl() {
+    async findAll() {
         return this.collection.find({}).toArray();
     }
 
