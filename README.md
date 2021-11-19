@@ -2,7 +2,6 @@
 Proyecto de práctica de facturación con NODEJS 
 
 ## Common tasks
-
 - [X] Agregar .gitinore para ignorar los archivos que no son necesarios subir al repositorio (Ej: node_modules)
 - [X] Configurar EsLint
 - [X] Configurar express
@@ -12,6 +11,8 @@ Proyecto de práctica de facturación con NODEJS
 - [X] Crear en el package.json el script para levantar el proyecto "npm run start"
 - [X] Crear en el package.json el script para levantar el proyecto con nodemon "npm run dev"
 - [X] Agregar el DEBUG al proyecto
+- [ ] Agregar joi a invel de repositorio
+- [ ] Agregar pruebas unitarias usando jest
 
 ## User module
 - [X] Implementar este cliente de mongo https://www.npmjs.com/package/mongodb
@@ -21,3 +22,4 @@ Proyecto de práctica de facturación con NODEJS
   * Registrar el usuario en la coleccion users
   * Registrar el password en la coleccion passwords
   * El password debe ser encriptado usando https://www.npmjs.com/package/bcrypt
+

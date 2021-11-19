@@ -1,4 +1,5 @@
 const { createController } = require('awilix-express');
+const AppError = require('../../../common/error');
 
 class UserController {
     constructor({ userService }) {
@@ -18,15 +19,19 @@ class UserController {
         try {
             const data = {
                 username: req.body.username,
-                firstname: req.body.firstname,
-                lastname: req.body.lastname,
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
             };
 
             const result = await this.userService.create(data, req.body.password);
             res.send(result);
         } catch (error) {
-            res.status(400);
-            res.send(error);
+            if (error instanceof AppError) {
+                res.status(400);
+                res.send(error);
+            } else {
+                throw error;
+            }
         }
     }
 }
