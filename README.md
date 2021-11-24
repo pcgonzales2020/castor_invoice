@@ -11,7 +11,7 @@ Proyecto de práctica de facturación con NODEJS
 - [X] Crear en el package.json el script para levantar el proyecto "npm run start"
 - [X] Crear en el package.json el script para levantar el proyecto con nodemon "npm run dev"
 - [X] Agregar el DEBUG al proyecto
-- [ ] Agregar joi a invel de repositorio
+- [X] Agregar joi a invel de repositorio
 - [ ] Agregar pruebas unitarias usando jest
 
 ## User module

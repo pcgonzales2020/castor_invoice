@@ -9,6 +9,21 @@
             "name": "Run npm start",
             "request": "launch",
             "type": "node-terminal"
-        }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "debug jest current open file",
+            "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+            "args": [
+                "${relativeFile}",
+                "--verbose",
+                "-i",
+                "--no-cache",
+                "--watchAll"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
     ]
 }

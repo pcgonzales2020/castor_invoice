@@ -2,6 +2,7 @@ const Joi = require('joi');
 
 module.exports = {
     users: Joi.object({
+        _id: Joi.any(),
         username: Joi.string()
             .max(10)
             .required(),
