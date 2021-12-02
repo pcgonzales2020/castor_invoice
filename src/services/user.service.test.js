@@ -12,15 +12,15 @@ const container = {
             firstName: "christian",
             lastName: "gonzales"
         }])),
+        create: jest.fn((data) => {
+            data._id = new ObjectId("507f191e810eee729de860ea");
+        }),
         isUsernameUnique: jest.fn((username) => {
             if (username === "erodriguez") {
                 return false;
             }
 
             return true;
-        }),
-        create: jest.fn((data) => {
-            data._id = new ObjectId("507f191e810eee729de860ea");
         })
     },
     passwordRepository: {
@@ -68,7 +68,7 @@ describe("User service test", () => {
                     lastName: "rodríguez"
                 }, "123456456789");
 
-                throw new Error("Username must be unique");
+                throw new Error("Invalid test passed");
             } catch (error) {
                 expect(error instanceof AppError).toBe(true);
                 expect(error.code).toBe("ERR_USERNAME_TAKEN");

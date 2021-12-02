@@ -13,17 +13,15 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "debug jest current open file",
-            "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+            "name": "Jest single run all tests",
+            "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
             "args": [
-                "${relativeFile}",
                 "--verbose",
                 "-i",
-                "--no-cache",
-                "--watchAll"
+                "--no-cache"
             ],
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
-        },
+        }
     ]
 }

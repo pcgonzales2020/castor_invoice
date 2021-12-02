@@ -35,12 +35,12 @@
   },
   "eslintConfig": {
     "extends": "eslintrc.json",
-    "env":{
-      "jest": true  
+    "env": {
+      "jest": true
     }
   },
-  "jest":{
-    "testEnvironment":"node",
+  "jest": {
+    "testEnvironment": "node",
     "verbose": true
   },
   "keywords": []

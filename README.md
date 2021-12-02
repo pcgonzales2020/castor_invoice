@@ -22,4 +22,4 @@ Proyecto de práctica de facturación con NODEJS
   * Registrar el usuario en la coleccion users
   * Registrar el password en la coleccion passwords
   * El password debe ser encriptado usando https://www.npmjs.com/package/bcrypt
-
+- [ ] Agregar pruebas unitarias al esquema y al user y password repository
